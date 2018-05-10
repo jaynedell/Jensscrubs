@@ -1,0 +1,39 @@
+@mixin columns($options) {
+  -webkit-columns: $options;
+     -moz-columns: $options;
+          columns: $options;
+}
+
+@mixin column-count($value) {
+  -webkit-column-count: $value;
+     -moz-column-count: $value;
+          column-count: $value;
+}
+
+@mixin column-width($value) {
+  -webkit-column-width: $value;
+     -moz-column-width: $value;
+          column-width: $value;
+}
+
+@mixin column-gap($value) {
+  -webkit-column-gap: $value;
+     -moz-column-gap: $value;
+          column-gap: $value;
+}
+
+@mixin column-rule($option) {
+  -webkit-column-rule: $option;
+     -moz-column-rule: $option;
+          column-rule: $option;
+}
+
+@mixin column-span($value) {
+  -webkit-column-span: $value;
+          column-span: $value;
+}
+
+@mixin column-fill($value) {
+  -moz-column-fill: $value;
+       column-fill: $value;
+}

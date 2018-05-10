@@ -1,0 +1,49 @@
+@import "mixins/flexbox";
+@import "mixins/columns";
+
+@mixin breakpoint($bp) {
+  @media all and (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin rotate($value) {
+  -webkit-transform: rotate($value);
+      -ms-transform: rotate($value);
+          transform: rotate($value);
+}
+
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+     -moz-appearance: $value;
+          appearance: $value;
+}
+
+@mixin transform-origin($value) {
+  -webkit-transform-origin: $value;
+      -ms-transform-origin: $value;
+          transform-origin: $value;
+}
+
+@mixin object-fit($value) {
+  -o-object-fit: $value;
+     object-fit: $value;
+}
+
+@mixin object-position($value) {
+  -o-object-position: $value;
+     object-position: $value;
+}
+
+@mixin centerbox() {
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+      -ms-transform: $value;
+          transform: $value;
+}

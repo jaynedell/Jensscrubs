@@ -1,0 +1,152 @@
+.swell-tier-list {
+  @extend %row;
+  @extend %swell-list;
+}
+
+.swell-tier {
+  margin-bottom: 1em;
+  @include flexbox();
+  @include flex-direction(column);
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:nth-child(2) {
+    padding-right: 0;
+  }
+
+  &:nth-child(3) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include breakpoint($MD) {
+    margin-bottom: 0;
+
+    &:nth-child(n) {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+  }
+}
+
+.swell-tier-content {
+  color: white;
+  height: 100%;
+  min-height: 16em;
+  text-align: center;
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  @include breakpoint($MD) {
+    min-height: 24em;
+  }
+}
+
+.swell-tier-heading {
+  height: 100%;
+  @include centerbox();
+}
+
+.swell-tier-heading,
+.swell-tier-main {
+  padding: 0.5em;
+  @include breakpoint($MD) {
+    padding: 1em;
+  }
+}
+
+.swell-tier-name {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:before {
+    display: block;
+    font-family: "FontAwesome";
+  }
+}
+
+.swell-tier-main {
+  background: rgba(black, 0.167);
+}
+
+.swell-tier-multiplier {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: auto;
+  max-width: 10em;
+  text-transform: uppercase;
+  @include breakpoint($MD) {
+    font-size: 2em;
+  }
+}
+
+.swell-tier-description {
+  font-size: 1em;
+
+  @include breakpoint($MD) {
+    font-size: 1.5em;
+  }
+  span {
+    display: block;
+    margin: auto;
+  }
+}
+
+.swell-tier-silver {
+  @extend %col-6;
+  @extend %col-md-4;
+  .swell-tier-content {
+    background: $accent1;
+  }
+
+  .swell-tier-name:before {
+    content: "\f005";
+    display: block;
+    font-family: "FontAwesome";
+  }
+}
+
+.swell-tier-gold {
+  @extend %col-6;
+  @extend %col-md-4;
+  .swell-tier-content {
+    background: $accent2;
+  }
+
+  .swell-tier-name:before {
+    content: "\f005\00a0\f005";
+  }
+}
+
+.swell-tier-platinum {
+  @extend %col-12;
+  @extend %col-md-4;
+  .swell-tier-content {
+    background: $dominant;
+  }
+
+  .swell-tier-name:before {
+    content: "\f005\00a0\f005\00a0\f005";
+  }
+}
+
+.swell-tier-progress {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  min-height: 4em;
+  text-align: center;
+  text-transform: uppercase;
+  @include centerbox();
+}
+
+.swell-tier-platinum.swell-tier-inactive {
+  .swell-tier-progress {
+    display: none;
+    @include breakpoint($MD) {
+      display: block;
+    }
+  }
+}

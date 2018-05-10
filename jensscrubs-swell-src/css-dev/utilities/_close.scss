@@ -1,0 +1,44 @@
+$back-link-pseudo-height: 2px;
+$back-link-color: white;
+$back-link-length: 2em;
+$back-link-max-length: 2rem;
+
+%swell-back-link {
+  cursor: pointer;
+  display: block;
+  height: $back-link-max-length;
+  margin-left: auto;
+  position: relative;
+  vertical-align: middle;
+  width: $back-link-max-length;
+
+  &:after,
+  &:before {
+    background: $back-link-color;
+    content: "";
+    display: block;
+    left: 50%;
+    height: $back-link-pseudo-height;
+    position: absolute;
+    top: 50%;
+    width: calc(#{$back-link-length} * 1.414 - #{$back-link-pseudo-height});
+  }
+
+  &:before {
+    @include transform(translate(-50%, -50%) rotate(45deg));
+  }
+
+  &:after {
+    @include transform(translate(-50%, -50%) rotate(-45deg));
+  }
+}
+
+.swell-referral-back-link {
+  @extend %swell-back-link;
+}
+
+.swell-referral-thanks .swell-referral-back-link {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+}

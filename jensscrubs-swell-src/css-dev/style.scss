@@ -1,0 +1,148 @@
+@import "partials";
+@import "vendors";
+@import "utilities";
+@import "modules";
+
+.swell-section {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.account .swell-referral {
+  .swell-referral-content-sidebar {
+    visibility: hidden;
+    position: static;
+  }
+
+  .swell-referral-sidebar-image {
+    display: none;
+  }
+
+  .swell-referral-content-container {
+    position: relative;
+    @extend %no-gutters;
+  }
+
+  .swell-referral-content-main {
+    @extend %col;
+    @extend %col-12;
+  }
+
+  .swell-referral-heading {
+    font-size: 1.75em;
+    @include breakpoint($MD) {
+      font-size: 2em;
+    }
+  }
+
+  .swell-referral-thanks {
+    min-height: 20em;
+  }
+
+  .swell-referral-back-link {
+    position: relative;
+  }
+
+  .swell-referral-sidebar-details {
+    border: 1px solid white;
+    bottom: auto;
+    left: auto;
+    right: 1.5em;
+    top: 1.5em;
+    visibility: visible;
+    z-index: 1;
+    padding: 0.5em;
+    @include breakpoint($MD) {
+      padding: 0.5em 1em;
+    }
+  }
+}
+
+.swell-section-account {
+  .swell-section-heading {
+    font-weight: bold;
+    text-transform: none;
+    margin-bottom: 1rem;
+  }
+
+  .swell-section-details {
+    color: $dominant;
+    font-size: 1.25em;
+  }
+}
+
+.swell-section-redemption {
+  .swell-section-heading {
+    margin-bottom: 1rem;
+  }
+
+  .swell-section-details {
+    color: $dominant;
+    font-size: 1.25em;
+  }
+}
+
+.swell-section-customer {
+  .swell-section-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+    text-transform: none;
+    @include breakpoint($MD) {
+      font-size: 3em;
+      font-weight: bold;
+    }
+  }
+
+  .swell-section-details {
+    color: $dominant;
+    margin: 0 auto 1em auto;
+    max-width: $MD;
+    @include breakpoint($MD) {
+      font-size: 1.25em;
+    }
+  }
+
+  .swell-point-balance,
+  .swell-point-converted,
+  .swell-tier-status {
+    font-weight: bold;
+  }
+}
+
+.swell-section-heading {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  @include breakpoint($MD) {
+    font-size: 2em;
+  }
+}
+
+.swell-section-details {
+  text-align: center;
+}
+
+.header + .body {
+  margin: 0;
+}
+
+.swell-link-container {
+  color: lightgray;
+  margin-bottom: 2em;
+  text-align: center;
+  text-transform: uppercase;
+
+  .swell-error {
+    margin-top: 1em;
+    color: crimson;
+    margin-bottom: 0;
+  }
+}
+
+.body {
+  @media all and (min-width: 801px) {
+    margin-top: 2em;
+  }
+}

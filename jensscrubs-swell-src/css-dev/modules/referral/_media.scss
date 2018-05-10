@@ -1,0 +1,29 @@
+.swell-referral-media-details {
+  font-size: 0.875em;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  text-align: center;
+  @include breakpoint($MD) {
+    font-size: 1em;
+  }
+}
+
+.swell-referral-media-list {
+  text-align: center;
+  margin: 0 auto 1em;
+  @extend %swell-list;
+}
+
+.swell-referral-medium {
+  cursor: default;
+  display: inline-block;
+  font-size: 1.25em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  text-align: center;
+}
+
+.swell-referral-medium-content {
+  cursor: pointer;
+  display: inline-block;
+}

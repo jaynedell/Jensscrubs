@@ -1,0 +1,55 @@
+%swell-table {
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  width: calc(100% + 1em);
+  @include breakpoint($MD) {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid lightgray;
+    padding: 0.5em;
+  }
+}
+
+.swell-tier-redemption-table {
+  font-size: 0.8em;
+  @extend %swell-table;
+  @include breakpoint($MD) {
+    font-size: 1.1em;
+  }
+
+  th {
+    text-transform: uppercase;
+  }
+
+  tr th:first-child {
+    text-align: left;
+  }
+
+  tbody {
+    tr {
+      color: white;
+    }
+
+    td {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    tr:first-child {
+      background: $accent1;
+    }
+
+    tr:nth-child(2) {
+      background: $accent2;
+    }
+
+    tr:nth-child(3) {
+      background: $dominant;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.swell-gate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(white, 0.9);
+  z-index: 100;
+  @include centerbox();
+}
+
+.swell-gate-content {
+  border: 2px dashed $dominant;
+  background: rgba($accent2, 0.5);
+  color: $dominant;
+  padding: 2em;
+  max-width: $SM;
+}
+
+.swell-gate-details {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  text-align: center;
+}

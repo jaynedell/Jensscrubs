@@ -1,0 +1,43 @@
+.swell-step-list {
+  margin-bottom: 0;
+  max-width: $MD;
+  @extend %swell-list;
+  @extend %row;
+  @include breakpoint($MD) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.swell-step {
+  @extend %col-4;
+}
+
+.swell-step-content {
+  text-align: center;
+}
+
+.swell-step-icon-container {
+  background-color: $dominant;
+  border-radius: 50%;
+  color: white;
+  height: 4.5em;
+  margin: 1em auto;
+  width: 4.5em;
+  @include centerbox();
+}
+
+.swell-step-heading {
+  font-size: 0.85em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0;
+  @include breakpoint($MD) {
+    font-size: 1.5em;
+  }
+}
+
+.swell-step-details {
+  margin: auto;
+  max-width: 10em;
+}

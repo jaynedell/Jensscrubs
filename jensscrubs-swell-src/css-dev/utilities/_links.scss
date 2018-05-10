@@ -1,0 +1,51 @@
+/*************************************************
+*               Swell Link Primary               *
+*************************************************/
+$swell-link-primary-background: $dominant;
+$swell-link-primary-border: 2px solid $dominant;
+$swell-link-primary-color: white;
+/*************************************************
+*              Swell Link Secondary              *
+*************************************************/
+$swell-link-secondary-background: white;
+$swell-link-secondary-border: 2px solid $dominant;
+$swell-link-secondary-color: $dominant;
+
+%swell-link {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+}
+
+.swell-link__primary {
+  @extend %swell-link;
+  background: $swell-link-primary-background;
+  border: $swell-link-primary-border;
+  color: $swell-link-primary-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $swell-link-primary-color;
+  }
+
+  &.swell-link__disabled {
+    background: lighten($accent1, 16.667%);
+    border-color: lighten($accent1, 16.667%);
+    color: lighten($accent1, 40%);
+  }
+}
+
+.swell-link__secondary {
+  @extend %swell-link;
+  background: $swell-link-secondary-background;
+  border: $swell-link-secondary-border;
+  color: $swell-link-secondary-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $swell-link-secondary-color;
+  }
+}

@@ -1,0 +1,49 @@
+.swell-referral-copy {
+  background: rgba(white, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  @include centerbox();
+}
+
+.swell-referral-copy-content {
+  background: $dominant;
+  color: white;
+  padding: 2em;
+  max-width: $SM;
+  width: 95%;
+  @include breakpoint($MD) {
+    width: 100%;
+  }
+
+  .swell-referral-heading {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .swell-referral-details {
+    text-align: center;
+    margin-top: 0.5em;
+  }
+
+  .swell-referral-form-wrapper {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+.swell-referral-copy-link {
+  @extend %swell-input__primary;
+  font-weight: bold;
+  margin-bottom: 1em;
+  @include centerbox();
+}
+
+.swell-referral-copy-button {
+  @extend %swell-input__secondary;
+}

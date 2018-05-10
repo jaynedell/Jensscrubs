@@ -1,0 +1,76 @@
+.jconfirm.jconfirm-modern {
+
+  .jconfirm-box {
+    border-top: 10px solid $dominant;
+
+    div.jconfirm-title-c .jconfirm-icon-c {
+      color: $dominant;
+    }
+
+    div.jconfirm-closeIcon {
+      color: $dominant;
+      opacity: 1;
+    }
+
+    .jconfirm-buttons button.btn-default {
+      background-color: $dominant;
+      border-radius: 0;
+      color: white;
+
+      &:hover {
+        background-color: $dominant;
+        color: white;
+      }
+    }
+
+    div.jconfirm-content {
+      color: black;
+      max-height: 300px;
+      overflow-y: auto;
+
+      table {
+        width: 100%;
+      }
+
+      thead th {
+        background-color: $dominant;
+        color: white;
+        padding-top: 0.333em;
+        padding-bottom: 0.333em;
+      }
+
+      td {
+        padding-top: 0.333em;
+        padding-bottom: 0.333em;
+      }
+
+      tbody th {
+        font-weight: normal;
+      }
+
+      tbody tr {
+        border-bottom: 1px solid lightgray;
+      }
+
+      p {
+        margin-bottom: 0;
+
+        &:not(.swell-campaign-action-details) {
+          color: lighten(black, 60%);
+          margin-top: 1em;
+        }
+      }
+    }
+  }
+
+  .jconfirm-title {
+    color: $dominant;
+    font-family: $font-sans;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    small {
+      display: none;
+    }
+  }
+}

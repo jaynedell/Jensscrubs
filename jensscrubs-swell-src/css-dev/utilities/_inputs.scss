@@ -1,0 +1,20 @@
+%swell-input {
+  height: 3em;
+  padding: 0;
+  width: 100%;
+}
+
+%swell-input__primary {
+  @extend %swell-input;
+  background: white;
+  color: black;
+  padding-left: 0.5em;
+}
+
+%swell-input__secondary {
+  @extend %swell-input;
+  background: transparent;
+  border: 2px solid white;
+  font-weight: bold;
+  text-transform: uppercase;
+}

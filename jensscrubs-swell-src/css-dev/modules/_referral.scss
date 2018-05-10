@@ -1,0 +1,103 @@
+@import "referral/media";
+@import "referral/copy";
+@import "referral/thanks";
+
+.swell-referral {
+  padding-bottom: 1em;
+}
+
+.swell-referral-content-container {
+  @extend %row;
+}
+
+.swell-referral-content-sidebar {
+  padding-left: 0;
+  padding-right: 0;
+  @extend %col-md-5;
+  @include breakpoint($MD) {
+    padding-left: 0.5em;
+  }
+}
+
+.swell-referral-content-main {
+  @extend %col-md-7;
+  padding-left: 0;
+  padding-right: 0;
+  @include breakpoint($MD) {
+    padding-right: 0.5em;
+  }
+
+  > div {
+    background: $dominant;
+    color: white;
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    > p,
+    h2,
+    .swell-referral-form-wrapper {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+.swell-referral-form-wrapper {
+  border-top: 1px solid mix($dominant, white, 80%);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 1em;
+}
+
+.swell-referral-sidebar-image {
+  width: 100%;
+  height: 100%;
+  @include object-fit(cover);
+}
+
+.swell-referral-sidebar-details {
+  background: $dominant;
+  bottom: 1em;
+  color: white;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  position: absolute;
+  right: 1em;
+  @include breakpoint($MD) {
+    left: 1.5em;
+    right: auto;
+  }
+}
+
+.swell-referral-heading {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+  @include breakpoint($MD) {
+    font-size: 3em;
+  }
+}
+
+.swell-referral-form-list {
+  @extend %swell-list;
+  margin-left: 0;
+  margin-bottom: 1em;
+}
+
+.swell-referral-form-list-submit,
+#swell-referral-refer-submit {
+  @extend %swell-input__secondary;
+}
+
+.swell-referral-form-list-field-input {
+  @extend %swell-input__primary;
+
+  &.error {
+    border: 1px solid red;
+  }
+}
+
+.swell-referral-form-header-details {
+  margin-bottom: 0.5em;
+}

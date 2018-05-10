@@ -1,0 +1,109 @@
+.swell-campaign-list {
+  @extend %row;
+  @extend %swell-list;
+  @include justify-content(center);
+}
+
+.swell-campaign {
+  margin-bottom: 1em;
+  @extend %col-6;
+  @extend %col-md-4;
+  @include flexbox();
+
+  &:not(.swell-campaign-inactive) {
+    .swell-campaign-content {
+      cursor: pointer;
+    }
+  }
+
+  &:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  &:nth-child(even) {
+    padding-right: 0;
+  }
+
+  @include breakpoint($MD) {
+    &:nth-child(n) {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+  }
+}
+
+.swell-campaign-content {
+  background-size: 100%;
+  background-position: center 2px!important;
+  background-color: $dominant;
+  position: relative;
+  @include flexbox();
+  @include flex-direction(column);
+}
+
+.swell-campaign-image {
+  margin-top: 2px;
+  width: 100%;
+}
+
+.swell-campaign-icon {
+  color: $dominant;
+  font-size: 2em;
+  left: 0.5em;
+  position: absolute;
+  top: 0.5em;
+  @include breakpoint($MD) {
+    left: 1em;
+    top: 1em;
+  }
+}
+
+.swell-campaign-main {
+  @include flex-grow(1);
+  @include align-items(center);
+  @extend %row;
+  @extend %no-gutters;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  @include breakpoint($MD) {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+
+.swell-campaign-type,
+.swell-campaign-value {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  @extend %col-6;
+}
+
+.swell-campaign-type {
+  font-size: 0.8em;
+  @include breakpoint($MD) {
+    font-size: 1em;
+  }
+
+  small {
+    display: block;
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+}
+
+.swell-campaign-value {
+  text-align: right;
+
+  span {
+    font-size: 0.75em;
+    border: 2px solid white;
+    color: white;
+    display: inline-block;
+    padding: 0.4em;
+    @include breakpoint($MD) {
+      padding: 0.5em;
+      font-size: 1em;
+    }
+  }
+}
